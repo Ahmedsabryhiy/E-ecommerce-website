@@ -172,9 +172,9 @@ namespace LapShop.Controllers
                 oClsSalesInvoices.Save(oSalesInvoice, lstInvoiceItems, true);
             }
             
-            catch
+            catch (Exception ex)
             {
-
+                  
             }
             
         }

@@ -93,4 +93,40 @@
     <None Include="wwwroot\Uploads\Sliders\fb23f6c7-8c1e-4a2e-86e4-e62ca281b1af2024811.jpg" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Resources\ResAdmin.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ResAdmin.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\ResGeneral.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ResGeneral.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\ResWebSite.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ResWebSite.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\ResAdmin.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResAdmin.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>UI.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\ResGeneral.resx">
+      <CustomToolNamespace>UI.Resources</CustomToolNamespace>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResGeneral.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\ResWebSite.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResWebSite.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>UI.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>

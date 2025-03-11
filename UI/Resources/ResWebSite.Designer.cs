@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LapShop.Rserouses {
+namespace UI.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace LapShop.Rserouses {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LapShop.Rserouses.ResWebSite", typeof(ResWebSite).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("UI.Resources.ResWebSite", typeof(ResWebSite).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,15 @@ namespace LapShop.Rserouses {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ContinueShopping.
+        /// </summary>
+        public static string ContinueShopping {
+            get {
+                return ResourceManager.GetString("ContinueShopping", resourceCulture);
             }
         }
         

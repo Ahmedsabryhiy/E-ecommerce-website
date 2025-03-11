@@ -159,4 +159,7 @@
   <data name="lblTotal" xml:space="preserve">
     <value>Total</value>
   </data>
+  <data name="ContinueShopping" xml:space="preserve">
+    <value>ContinueShopping</value>
+  </data>
 </root>

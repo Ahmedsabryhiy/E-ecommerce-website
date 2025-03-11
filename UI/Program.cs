@@ -9,12 +9,20 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.Reflection;
 using LapShop.Domain.Entities;
+using Microsoft.AspNetCore.Localization;
+using System.Globalization;
 
 
 var builder = WebApplication.CreateBuilder(args);
-
+// Add localization
+builder.Services.AddLocalization(options =>
+{
+    options.ResourcesPath = "Resources";
+});
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+
+builder.Services.AddControllersWithViews()
+    .AddViewLocalization();
 #region Custom  Services
 builder.Services.AddDbContext<LapShopContext>
 (options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -131,6 +139,14 @@ builder.Services.AddAuthentication(options =>
 #endregion
 
 var app = builder.Build();
+// Configure localization middleware
+var supportedCultures = new[] { "en-US" }.Select(c => CultureInfo.CreateSpecificCulture(c)).ToArray();
+app.UseRequestLocalization(new RequestLocalizationOptions
+{
+    DefaultRequestCulture = new RequestCulture("en-US"),
+    SupportedCultures = supportedCultures,
+    SupportedUICultures = supportedCultures
+});
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

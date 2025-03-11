@@ -1,4 +1,4 @@
-﻿using LapShop.Rserouses;
+﻿using UI.Resources;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
