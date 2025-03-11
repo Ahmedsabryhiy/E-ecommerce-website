@@ -1,0 +1,96 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\FrontEnd\Template\Multikart Html Theme\doc\Documentation\Documentation\.idea\misc.xml" />
+    <Content Include="wwwroot\FrontEnd\Template\Multikart Html Theme\doc\Documentation\Documentation\.idea\modules.xml" />
+    <Content Include="wwwroot\FrontEnd\Template\Multikart Html Theme\doc\Documentation\Documentation\.idea\workspace.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.3.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="7.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BL\BL.csproj" />
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\chart\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\ckeditor\plugins\a11yhelp\dialogs\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\ckeditor\plugins\about\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\ckeditor\plugins\colordialog\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\ckeditor\plugins\div\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\ckeditor\plugins\find\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\ckeditor\plugins\flash\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\ckeditor\plugins\forms\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\ckeditor\plugins\iframe\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\ckeditor\plugins\image\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\ckeditor\plugins\link\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\ckeditor\plugins\liststyle\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\ckeditor\plugins\pastefromword\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\ckeditor\plugins\scayt\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\ckeditor\plugins\smiley\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\ckeditor\plugins\specialchar\dialogs\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\ckeditor\plugins\tabletools\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\ckeditor\plugins\table\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\ckeditor\plugins\templates\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\ckeditor\plugins\wsc\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\plugins\a11yhelp\dialogs\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\plugins\about\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\plugins\colordialog\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\plugins\div\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\plugins\find\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\plugins\flash\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\plugins\forms\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\plugins\iframe\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\plugins\image\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\plugins\link\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\plugins\liststyle\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\plugins\pastefromword\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\plugins\scayt\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\plugins\smiley\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\plugins\specialchar\dialogs\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\plugins\tabletools\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\plugins\table\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\plugins\templates\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\editor\ckeditor\plugins\wsc\" />
+    <Folder Include="wwwroot\FrontEnd\Template\Multikart Html Theme\Multikart_html\assets\js\icons\" />
+    <Folder Include="wwwroot\Uploads\OperatingSystems\" />
+    <Folder Include="wwwroot\Uploads\Pages\" />
+    <Folder Include="wwwroot\Uploads\Settings\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\FrontEnd\Template\Multikart Html Theme\doc\Documentation\Documentation\.idea\Documentation.iml" />
+    <None Include="wwwroot\Uploads\Categores\a0bdf279-bc9b-46d2-af74-ca7a94a0a55c202484.jpg" />
+    <None Include="wwwroot\Uploads\ItemImages\1b0f29d9-73ff-4194-8ec9-c331782f30df2024820.jpg" />
+    <None Include="wwwroot\Uploads\ItemImages\f8fcc775-b022-4044-bd8e-54871b5a787f2024820.jpg" />
+    <None Include="wwwroot\Uploads\Items\0103aade-53b2-4a31-b6b8-c084e80614ff202487.jpg" />
+    <None Include="wwwroot\Uploads\Items\0cff173f-fadd-43d0-818a-3fec69898c8b202483.jpg" />
+    <None Include="wwwroot\Uploads\Items\4c0ad8cd-b605-48f2-b5bf-9d68dd4d637f2024811.jpg" />
+    <None Include="wwwroot\Uploads\Items\79bfdd5d-5d68-413e-b878-598a8493fad7202483.jpg" />
+    <None Include="wwwroot\Uploads\Items\7c7e9b12-de35-4cb3-83c2-7889a176703a202483.jpg" />
+    <None Include="wwwroot\Uploads\ItemTypes\1c67a933-d1bb-4ddb-a7f9-a6cb12b961e52024820.jpg" />
+    <None Include="wwwroot\Uploads\ItemTypes\aa57da7e-ab2e-4265-91e0-a9a6ec8f6fc72024819.jpg" />
+    <None Include="wwwroot\Uploads\Sliders\6d2114d9-d452-459e-8ed6-5701a539e3ba2024811.jpg" />
+    <None Include="wwwroot\Uploads\Sliders\f8f56479-7cfc-4528-97ed-4a866db13d5e2024811.jpg" />
+    <None Include="wwwroot\Uploads\Sliders\fb23f6c7-8c1e-4a2e-86e4-e62ca281b1af2024811.jpg" />
+  </ItemGroup>
+
+</Project>

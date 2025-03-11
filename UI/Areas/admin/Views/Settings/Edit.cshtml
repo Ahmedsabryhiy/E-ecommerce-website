@@ -1,0 +1,131 @@
+﻿@model TbSetting
+
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title"> Form elements </h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Form elements</li>
+            </ol>
+        </nav>
+    </div>
+    <form class="forms-sample" method="post" enctype="multipart/form-data"
+          asp-controller="Settings" asp-action="Save" role="form">
+        <div class="row">
+
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Default form</h4>
+                        <p class="card-description"> Basic form layout </p>
+
+                        <input asp-for="Id" type="hidden" />
+                      @*   <input asp-for="CreatedBy" type="hidden" />
+                        <input asp-for="CreatedDate" type="hidden" />
+                        <input asp-for="CurrentState" type="hidden" /> *@
+                      
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">@ResAdmin.lblWebSiteName</label>
+                            <input asp-for="WebSiteName" type="text" class="form-control" placeholder="@ResAdmin.lblWebSiteName">
+                            <span asp-validation-for="WebSiteName"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">@ResAdmin.lblContactNubmer</label>
+                            <input asp-for="ContactNubmer" type="number" class="form-control" placeholder="@ResAdmin.lblContactNubmer">
+                            <span asp-validation-for="ContactNubmer"></span>
+                        </div>
+
+                      
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">@ResAdmin.lblAddress</label>
+                            <input asp-for="Address " type="text" class="form-control" placeholder="@ResAdmin.lblAddress">
+                            <span asp-validation-for="Address "></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">
+                                @ResAdmin.lblMiddelPanner
+                            </label>
+                            <input asp-for="MiddelPanner" type="file" name="Files" multiple
+                                   class="form-control" placeholder="@ResAdmin.lblImage"
+                                   onchange="Upload.UploadDefaultImg(event)" accept=".jpg, .jpeg, .png, ,.gif">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">
+                                @ResAdmin.lblLastPanner
+                            </label>
+                            <input asp-for="LastPanner" type="file" name="Files" multiple
+                                   class="form-control" placeholder="@ResAdmin.lblImage"
+                                   onchange="Upload.UploadDefaultImg(event)" accept=".jpg, .jpeg, .png, ,.gif">
+
+                        </div>
+                     
+                        <button type="submit" formmethod="post" class="btn btn-gradient-primary me-2">@ResGeneral.lblSave</button>
+                        <button class="btn btn-light">@ResGeneral.lblNew</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Main Data</h4>
+                        <p class="card-description"> Basic form layout </p>
+
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">@ResAdmin.lblYouTupekLink</label>
+                            <input asp-for="YouTupekLink" type="text" class="form-control" placeholder="@ResAdmin.lblYouTupekLink">
+                            <span asp-validation-for="YouTupekLink"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">@ResAdmin.lblFaseBookLink</label>
+                            <input asp-for="FaseBookLink" type="text" class="form-control" placeholder="@ResAdmin.lblFaseBookLink">
+                            <span asp-validation-for="FaseBookLink "></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">@ResAdmin.lblTiwetterLink</label>
+                            <input asp-for="TiwetterLink" type="text" class="form-control" placeholder="@ResAdmin.lblFaseBookLink">
+                            <span asp-validation-for="TiwetterLink "></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">@ResAdmin.lblDescription</label>
+                            <input asp-for="WebSiteDescription" type="text" class="form-control" placeholder="@ResAdmin.lblDescription">
+                            <span asp-validation-for="WebSiteDescription"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">@ResAdmin.lblLogo</label>
+                            <input asp-for="Logo" type="text" class="form-control" placeholder="@ResAdmin.lblLogo">
+                            <span asp-validation-for="Logo"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </form>
+</div>
+
+@section Scripts
+{
+    <script>
+        var Upload = {
+            UploadDefaultImg: function (e) {
+                const file = e.target.files[0];
+                const reader = new FileReader();
+                reader.onloadend = () => {
+                    CourseMediaImgName = file.name;
+                    CourseMediaImgBase64 = reader.result.slice(reader.result.indexOf('base64,') + 7);
+                    $("#tbImgName").html(file.name)
+                    $("#tbImgSrc").html(`<img class="thumbnail" src = "${reader.result}"  style = "width: 200px;height: 300px;border-radius: 5px;border: 1px solid #d9d9d9;padding: 1px;" />`)
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+}
+
